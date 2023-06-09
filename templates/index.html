@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.box {
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border-radius: 10px;
+            border: 3px solid black;
+            margin: 5px;
+        }
+    </style>
+    <title>Playground</title>
+</head>
+
+<body class="bg-dark text-light">
+    {% if welcome == True %}
+        <h1 class="text-center my-3">Welcome! Type /play into the URL to start!</h1>
+    {% else %}
+    
+    {#
+    <div class="d-flex justify-content-center flex-wrap box-container my-5">
+        {% for x in range(num) %}
+            <div style="background-color: {{color}}" class="box"></div>
+        {% endfor %}
+    </div>
+    #}
+
+    {% if level == 1 %}
+    <h1 class="text-center my-5">Welcome to Level 1 of the Playground!</h1>
+    {#
+    <div class="d-flex justify-content-center flex-wrap box-container">
+        {% for x in range(num) %}
+            <div style="background-color: {{color}}" class="box"></div>
+        {% endfor %}
+    </div>
+    #}
+    <h2 class="text-center my-5">To move onto the next level, type in the URL how many boxes you want!</h2>
+    <h2 class="text-center my-5">For example: /play/5</h2>
+    {% endif %}
+
+    {% if level == 2 %}
+    <h1 class="text-center my-5">You reached Level 2!</h1>
+    {#
+    <div class="d-flex justify-content-center flex-wrap box-container">
+        {% for x in range(num) %}
+            <div style="background-color: {{color}}" class="box"></div>
+        {% endfor %}
+    </div>
+    #}
+    <h2 class="text-center my-5">Next up! Choose what color you want your boxes in the URL above!</h2>
+    <h2 class="text-center my-5">For example: /play/10/purple</h2>
+    {% endif %}
+
+    {% if level == 3 %}
+    <h1 class="text-center my-5">You reached the Final Level!</h1>
+    {# 
+    <div class="d-flex justify-content-center flex-wrap box-container">
+        {% for x in range(num) %}
+            <div style="background-color: {{color}}" class="box"></div>
+        {% endfor %}
+    </div>
+    #}
+    <h2 class="text-center my-5">Thanks for playing!</h2>
+    {% endif %}
+
+    <div class="d-flex justify-content-center flex-wrap box-container my-5">
+        {% for x in range(num) %}
+            <div style="background-color: {{color}}" class="box"></div>
+        {% endfor %}
+    </div>
+
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
